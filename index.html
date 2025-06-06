@@ -88,47 +88,47 @@
         console.log('ユーザーアクションを検出しました。BGMを開始します。');
         bgmEl.components.sound.playSound();
         
-        // 2. 3秒後、モデル表示＆anime01(1回)再生
+        // 2. 3秒後、モデル表示＆anime05(1回)再生
         setTimeout(function() {
-          console.log('3秒経過しました。モデルを表示してアニメーション1を開始します。');
+          console.log('3秒経過しました。モデルを表示してアニメーション5を開始します。');
           modelEl.setAttribute('visible', true);
-          // anime01を1回再生
-          modelEl.setAttribute('animation-mixer', {clip: 'anime01',loop: 'false',repetitions: '1',timeScale: '1',clampWhenFinished: 'true'});
+          // anime05を1回再生
+          modelEl.setAttribute('animation-mixer', {clip: 'anime05',loop: 'false',repetitions: '1',timeScale: '1',clampWhenFinished: 'true'});
           modelEl.setAttribute('position', '13.001 -15.505 -17.075');
           
-          // 3. anime01終了後(9.933秒後)、anime04(2回)＋移動＋sound02再生
+          // 3. anime05終了後、anime04(2回)＋移動＋sound02再生
           setTimeout(function () {
             console.log('アニメーション4(anime04)に切り替えます');
             modelEl.setAttribute('animation-mixer', {clip: 'anime04',loop: 'false',repetitions: '2',timeScale: '1',clampWhenFinished: 'true'});;
             sound2El.components.sound.playSound();
             
-            // 4. anime04終了後(5.8秒後)、anime02(3回)＋sound03再生
+            // 4. anime04終了後(5.6秒後)、anime02(3回)＋sound03再生
             setTimeout(function () {
               sound2El.components.sound.stopSound();
               console.log('アニメーション2(anime02)に切り替えます');
-              modelEl.setAttribute('animation-mixer', {clip: 'anime02',loop: 'false',repetitions: '3',timeScale: '1',clampWhenFinished: 'true'});
+              modelEl.setAttribute('animation-mixer', {clip: 'anime02',loop: 'false',repetitions: '1',timeScale: '1',clampWhenFinished: 'true'});
               sound3El.components.sound.playSound();
               
-              // 5. anime02終了後(11.7秒後)、anime01(4回)＋sound04再生
+              // 5. anime02終了後(11.7秒後)、anime06(4回)＋sound04再生
               setTimeout(function () {
                 sound3El.components.sound.stopSound();
-                console.log('最終アニメーション1(anime01)に切り替えます');
-                modelEl.setAttribute('animation-mixer', {clip: 'anime01',loop: 'false',repetitions: '4',timeScale: '1',clampWhenFinished: 'true'});
+                console.log('最終アニメーション6(anime06)に切り替えます');
+                modelEl.setAttribute('animation-mixer', {clip: 'anime06',loop: 'false',repetitions: '1',timeScale: '1',clampWhenFinished: 'true'});
                 sound4El.components.sound.playSound();
                 
                 // 6. anime01(4回)終了後(39.732秒後)、ページ遷移
                 setTimeout(function() {
                   console.log('アニメーション終了。ページ遷移を実行します。');
                   // window.location.href = 'https://seiei.ac.jp/';
-                }, 39732); // 39.732秒後（9.933 * 4）
+                }, 8000); // 8秒後（9.933 * 4）
                 
-              }, 11700); // 11.7秒後（3.9 * 3）anime02終了
+              }, 3800); // 11.7秒後（3.8 * 1）anime02終了
               
-            }, 5800); // 5.8秒後（2.9 * 2）anime04終了
+            }, 5666); // 5.6秒後（2.9 * 2）anime04終了
             
-          }, 9933); // 9.933秒後　anime01終了
+          }, 8627); // 8.267秒後　anime05終了
           
-        }, 3000); // 3秒後　anime01表示
+        }, 3000); // 3秒後　anime05表示
       }
     });
   </script>
