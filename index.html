@@ -21,13 +21,14 @@
     <a-entity
       id="myModel"
       gltf-model="./zombie.glb"
-      position="0 -0.8 -6"
-      scale="2 2 2"
+      position="-11.2 -5.395 -8.217"
+      rotation="0 60 0"
+      scale="8 8 8"
       visible="false"
     ></a-entity>
     
     <!-- 360度背景画像 -->
-    <a-sky id="sky" src="R0010209.JPG" rotation="0 0 0"></a-sky>
+    <a-sky id="sky" src="R0010218.JPG" rotation="0 0 0"></a-sky>
     <!-- サウンドエンティティ -->
     <a-entity id="bgm" sound="src: url(bgm01.mp3); autoplay: false; loop: true;"></a-entity>
     <a-entity id="sound1" sound="src: url(sound01.mp3); autoplay: false; loop: true;"></a-entity>
@@ -94,7 +95,7 @@
           modelEl.setAttribute('visible', true);
           // anime01を1回再生
           modelEl.setAttribute('animation-mixer', {clip: 'anime01',loop: 'false',repetitions: '1',timeScale: '1',clampWhenFinished: 'true'});
-          modelEl.setAttribute('position', '0 -0.8 -6');
+          modelEl.setAttribute('position', '11.224 -5.395 -8.217');
           
           // 3. anime01終了後(9.933秒後)、anime04(2回)＋移動＋sound02再生
           setTimeout(function () {
@@ -120,7 +121,7 @@
                 // 6. anime01(4回)終了後(39.732秒後)、ページ遷移
                 setTimeout(function() {
                   console.log('アニメーション終了。ページ遷移を実行します。');
-                  window.location.href = 'https://seiei.ac.jp/';
+                  // window.location.href = 'https://seiei.ac.jp/';
                 }, 39732); // 39.732秒後（9.933 * 4）
                 
               }, 11700); // 11.7秒後（3.9 * 3）anime02終了
