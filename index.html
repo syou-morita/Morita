@@ -113,6 +113,7 @@
               setTimeout(function () {
                 sound3El.components.sound.stopSound();
                 console.log('最終アニメーション6(anime06)に切り替えます');
+                modelEl.setAttribute('position', '13.001 -15.505 5.00');
                 modelEl.setAttribute('animation-mixer', {clip: 'anime06',loop: 'false',repetitions: '1',timeScale: '1',clampWhenFinished: 'true'});
                 sound4El.components.sound.playSound();
                 
