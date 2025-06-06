@@ -21,8 +21,8 @@
     <a-entity
       id="myModel"
       gltf-model="./zombie.glb"
-      position="-11.2 -5.395 -8.217"
-      scale="8 8 8"
+      position="13.001 -15.505 -17.075"
+      scale="13 13 13"
       visible="false"
     ></a-entity>
     
@@ -94,7 +94,7 @@
           modelEl.setAttribute('visible', true);
           // anime01を1回再生
           modelEl.setAttribute('animation-mixer', {clip: 'anime01',loop: 'false',repetitions: '1',timeScale: '1',clampWhenFinished: 'true'});
-          modelEl.setAttribute('position', '11.224 -5.395 -8.217');
+          modelEl.setAttribute('position', '13.001 -15.505 -17.075');
           
           // 3. anime01終了後(9.933秒後)、anime04(2回)＋移動＋sound02再生
           setTimeout(function () {
